@@ -1,0 +1,16 @@
+from sklearn import linear_model
+>>> regr = linear_model.LinearRegression()
+>>> regr.fit(diabetes_X_train, diabetes_y_train)
+LinearRegression()
+>>> print(regr.coef_)  
+[   0.30349955 -237.63931533  510.53060544  327.73698041 -814.13170937
+  492.81458798  102.84845219  184.60648906  743.51961675   76.09517222]
+
+
+>>> # The mean square error
+>>> np.mean((regr.predict(diabetes_X_test) - diabetes_y_test)**2)
+
+>>> # Explained variance score: 1 is perfect prediction
+>>> # and 0 means that there is no linear relationship
+>>> # between X and y.
+>>> regr.score(diabetes_X_test, diabetes_y_test)
