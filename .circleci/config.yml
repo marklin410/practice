@@ -18,8 +18,8 @@ jobs:
       - run: sudo python3 -m ipykernel install --user
       - run: jupyter-nbconvert --execute ./Homework1.ipynb
       - store_artifacts:
-        path: ./Homework1.html
-        destination: Homework1.html 
+          path: ./Homework1.html
+          destination: Homework1.html 
 workflows:
   main:
     jobs:
