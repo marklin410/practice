@@ -8,7 +8,7 @@ build:
 docker:
 - image: circleci/python:3.6.4
 steps:
-- checkout     <-можно выкинуть
+- checkout     
 - run: sudo pip install jupyter_client
 - run: sudo pip install nbconvert
 - run: sudo pip install numpy
@@ -20,4 +20,7 @@ steps:
 - store_artifacts:
 path: ./Homework1.html
 destination: Homework1.html 
-
+workflows:
+  main:
+    jobs:
+      - build-and-test
