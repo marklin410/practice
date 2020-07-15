@@ -21,6 +21,6 @@ jobs:
         path: ./Homework1.html
         destination: Homework1.html 
 workflows:
-
+  main:
     jobs:
       - build
