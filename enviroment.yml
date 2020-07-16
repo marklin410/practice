@@ -1,0 +1,12 @@
+name: myenvironment
+channels:
+  - conda-forge
+dependencies:
+  - ipython
+  - psutil
+  - scikit-learn
+  - matplotlib
+  - kaggle
+  - pandas
+  - seaborn
+  - osfclient
